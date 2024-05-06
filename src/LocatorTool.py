@@ -31,28 +31,19 @@ class LocatorToolWidget(QWidget):
         
         for obj in selected_objects:
             # Capture the original translation of the object
-            original_position = cmds.xform(obj, query=True, worldSpace=True, translation=True, rotation=True)
-
-            # Zero out the transformations
-            cmds.setAttr(f"{obj}.translateX", 0)
-            cmds.setAttr(f"{obj}.translateY", 0)
-            cmds.setAttr(f"{obj}.translateZ", 0)
-            cmds.setAttr(f"{obj}.rotateX", 0)
-            cmds.setAttr(f"{obj}.rotateY", 0)
-            cmds.setAttr(f"{obj}.rotateZ", 0)
-            ##cmds.setAttr(f"{obj}.scaleX", 1)
-            ##cmds.setAttr(f"{obj}.scaleY", 1)
-            ##cmds.setAttr(f"{obj}.scaleZ", 1)
-
-
+            original_translation = cmds.xform(obj, query=True, worldSpace=True, translation=True)
+            original_rotation = cmds.xform(obj, query=True, worldSpace=True, rotation=True)
+            
             # Create a locator
             locator = cmds.spaceLocator(name=f"{obj}_locator")[0]
 
+
+
             # Group the object and the locator
-            group = cmds.parent(locator, obj, name=f"{obj}_group")
+            group = cmds.parent(locator, obj, name=f"{obj}_locator")
 
             # Move the group to the original position of the object
-            cmds.xform(group, worldSpace=True, translation=original_position, rotation=original_position)
+            cmds.xform(locator, worldSpace=True, translation=original_translation, rotation=original_rotation)
 
             print(f"Group created with the object and locator: {group}")
         
