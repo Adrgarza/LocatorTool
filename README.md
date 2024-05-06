@@ -11,3 +11,6 @@
 * the color picker defines the color of the ghost
 * the first slider changes the overall opacity
 * the second slider controllers the falloff of the opacity
+
+> [!NOTE]
+> Useful information that users should know, even when skimming content.
