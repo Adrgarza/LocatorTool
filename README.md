@@ -10,4 +10,7 @@
 
 
 > [!NOTE]
+> make sure to install all of the files and drag them to the /scripts folder for maya, then drag on the installer to the maya viewport
+
+> [!IMPORTANT]
 > works with controllers and groups as well.
