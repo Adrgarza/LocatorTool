@@ -21,6 +21,5 @@ global proc AddPluginToShelf(string $scriptName)
     shelfButton -c $command -stp "python" -image $iconPath; 
 }
 
-AddPluginToShelf("CreateController");
-AddPluginToShelf("MayaToUE");
-AddPluginToShelf("Ghoster");
+AddPluginToShelf("LocatorTool");
+

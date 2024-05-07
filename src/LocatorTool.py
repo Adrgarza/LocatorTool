@@ -51,8 +51,10 @@ class LocatorToolWidget(QWidget):
 
 locatorToolWidget = LocatorToolWidget()
 locatorToolWidget.show()
-    ##
-    ##
+
+
+
+
     ## copy and paste this below into your MEL code in maya
     ## commandPort -name "localhost:7001" -sourceType "mel";
     ##
