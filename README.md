@@ -1,6 +1,6 @@
 # How to use
 
-## Ghoster
+## Locator Tool
 !['plusthing'](assets/fi-xtluxx-plus-thin.png)
 * select the mesh you wish to create a locator for
 * click the add locator button
